@@ -1,0 +1,26 @@
+{
+  "name": "anrahulananth.github.io",
+  "version": "1.0.0",
+  "description": "My Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anrahulananth/anrahulananth.github.io.git"
+  },
+  "keywords": [
+    "Developer",
+    "Portfolio"
+  ],
+  "author": "Rahul A N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anrahulananth/anrahulananth.github.io/issues"
+  },
+  "homepage": "https://github.com/anrahulananth/anrahulananth.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
