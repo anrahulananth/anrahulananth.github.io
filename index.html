@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Welcome to my portfolio</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
-      <nav class="menu">
-        <div class="menu-branding">
-          <div class="portrait"></div>
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="/about.html">About Me</a></li>
-          <li class="nav-item"><a href="/work.html">About Me</a></li>
-          <li class="nav-item"><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="home">
-      <h1 class="lg-heading">Rahul <span class="text-secondary">Anantharama</span></h1>
-      <h2 class="sm-heading">
-        Web Developer, Programmer,
-        Tech Enthusiast
-      </h2>
-      <div class="icons">
-        <a href="#!">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-      </div>
-    </main>
 
-    <script src="./js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Welcome to my portfolio</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous" />
+</head>
+
+<body id="bg-img">
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+      <div class="main" id="about">
+          <h1 class="lg-heading">About <span class="text-secondary">Me</span></h1>
+          <h2 class="sm-heading">A few things about me...</h2>
+          <div class="about-info">
+            <img src="../img/portrait.jpeg" alt="Rahul Anantharama" class="bio-image">
+          </div>
+      </div>
+      <div class="main" id="work">
+          <h1 class="lg-heading"><span class="text-secondary">Work</span></h1>
+          <h2 class="sm-heading"></h2>
+      </div>
+      <div class="main" id="contact">
+          <h1 class="lg-heading"><span class="text-secondary">Contact</span></h1>
+          <h2 class="sm-heading">Ph No: 9742484649</h2>
+          <h2 class="sm-heading">Email Address: rahul.anantharama@gmail.com</h2>
+      </div>
+      <div class="main">
+          <h1 class="lg-heading">Rahul <span class="text-secondary">Anantharama</span></h1>
+          <h2 class="sm-heading">
+            Web Developer, Programmer, Tech Enthusiast
+          </h2>
+          <div class="icons">
+            <a href="https://instagram.com/rahulanantharama">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://www.facebook.com/rahul.ananth">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://linkedin.com/in/rahulanantharama">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/anrahulananth">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+      </div>
+  </section>
+  <footer id="main-footer">
+    Copyright &copy; Rahul Anantharama 2019
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

@@ -1,18 +1,14 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
-$home-image: url('./img/background.jpg');
-$show-home-image: true;
-$background-opacity: 0.9;
-@mixin easeOut {
-    transition: all 0.5s ease-out;
-}
+@import "./config";
+@import "./menu";
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  @include background;
   background: $primary-color;
-  color: #fff;
+  color: $font-color;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -38,7 +34,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: $font-color;
   text-decoration: none;
 }
 
@@ -48,11 +44,28 @@ header {
   width: 100%;
 }
 
+footer {
+  
+}
+
 .text-secondary {
   color: $secondary-color;
 }
 
-main {
+section > * {
+  display: none;
+}
+
+section > *:target, section > *:last-child{
+  @include easeOut;
+  display: block;
+}
+
+section > *:target ~ *{
+  display: none;
+}
+
+.main {
   padding: 4rem;
   // height: 100%;
   min-height: calc(100vh - 60px);
@@ -62,7 +75,8 @@ main {
 
     a {
       padding: 0.4rem;
-
+      height: 32px;
+      width: 32px;
       &:hover {
         color: $secondary-color;
         @include easeOut();
@@ -77,3 +91,5 @@ main {
     }
   }
 }
+
+@import "./mobile";
