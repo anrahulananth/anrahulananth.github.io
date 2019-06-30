@@ -9,7 +9,11 @@ Inspired by Brad Traversy's Portfolio Tutorial.
 
 Use Liver Server VSCode Extension to serve the HTML and run the following command to build the CSS from SCSS
 
-`code` npm run sass
+`npm run sass` 
 
 Feel Free to use this in any way you want!
+
+## License
+
+Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.
 

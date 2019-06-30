@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Rahul Ananth</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link
       rel="stylesheet"
@@ -17,9 +18,11 @@
   <body id="bg-img">
     <header>
       <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+        <div class="menu-lines">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
       </div>
       <nav class="menu">
         <div class="menu-branding">
@@ -28,9 +31,10 @@
         <ul class="menu-nav">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About Me</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
@@ -39,110 +43,104 @@
     </header>
     <section>
       <div class="main" id="about">
-        <h1 class="lg-heading"><span class="text-secondary">About</span></h1>
-        <h2 class="sm-heading">A few things about me...</h2>
+        <h1 class="lg-heading">About</h1>
+        <h2 class="sm-heading"></h2>
         <div class="about-info">
           <img
-            src="/assets/img/portrait.jpeg"
+            src="/assets/img/portrait_small.jpeg"
             alt="Rahul Ananth"
             class="bio-image"
           />
 
           <div class="bio">
-            <h3 class="text-secondary">BIO</h3>
             <p class="bio-details">
               An experienced Front End Developer with expertise in building
               scalable applications using JavaScript Libraries, mainly ReactJS
             </p>
           </div>
-
-          <div class="job job-1">
-            <h3>Valtech India</h3>
-            <h6>Front End Developer</h6>
-            <p></p>
-          </div>
         </div>
       </div>
-      <div class="main" id="work">
-        <h1 class="lg-heading"><span class="text-secondary">Work</span></h1>
-        <h2 class="sm-heading">My work experience...</h2>
-        <div class="projects">
-          <div class="item">
-            <a href="#!">
-              <img src="/assets/img/projects/project1.jpg" alt="Project" />
-            </a>
-            <a href="#" class="btn-light">
-              <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="/assets/img/projects/project2.jpg" alt="Project" />
-            </a>
-            <a href="#" class="btn-light">
-              <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="/assets/img/projects/project3.jpg" alt="Project" />
-            </a>
-            <a href="#" class="btn-light">
-              <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="/assets/img/projects/project4.jpg" alt="Project" />
-            </a>
-            <a href="#" class="btn-light">
-              <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </div>
-          <div class="item">
-            <a href="#!">
-              <img src="/assets/img/projects/project5.jpg" alt="Project" />
-            </a>
-            <a href="#" class="btn-light">
-              <i class="fas fa-eye"></i> Project
-            </a>
-            <a href="#" class="btn-dark">
-              <i class="fab fa-github"></i> Github
-            </a>
-          </div>
+      <div class="main" id="skills">
+          <h1 class="lg-heading">Skills</h1>
+          <h2 class="sm-heading"></h2>
+          <ul class="skill-list">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>Webpack</li>
+              <li>Express</li>
+              <li>Ajax</li>
+              <li>EJS</li>
+              <li>Pug</li>
+              <li>Jest</li>
+              <li>AMP</li>
+              <li>PWA</li>
+              <li>SPA</li>
+              <li>SEO</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SASS</li>
+              <li>Material UI</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>Bootstrap</li>
+              <li>Handlebars</li>
+              <li>jQuery</li>
+          </ul>
+      </div>
+      <div class="main" id="experience">
+        <h1 class="lg-heading">Experience</h1>
+        <h2 class="sm-heading"></h2>
+        <div id="experience-timeline">
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
         </div>
       </div>
       <div class="main" id="contact">
-        <h1 class="lg-heading"><span class="text-secondary">Contact</span></h1>
+        <h1 class="lg-heading">Contact</h1>
         <h2 class="sm-heading">
-          This is how you can reach me...
         </h2>
         <div class="contact-info">
           <div class="contact contact-1">
-            <h3>Email:</h3>
-            <h4>rahulanantharama@gmail.com</h4>
+              <h3>Email</h3>
+              <h4>rahulanantharama@gmail.com</h4>
+              <h3>Phone</h3>
+              <h4>9742484649</h4>
+              <h3>Address</h3>
+              <h4>Kengeri, Bengaluru - 560010</h4>
           </div>
-  
           <div class="contact contact-2">
-            <h3>Phone:</h3>
-            <h4>rahulanantharama@gmail.com</h4>
-          </div>
-  
-          <div class="contact contact-3">
-            <h3>Address:</h3>
-            <h4>Kengeri, Bengaluru - 560010</h4>
+              <h3>Get in Touch</h3>
+              <div id="contact-form">
+                  <form method="POST" action="https://formspree.io/rahul.anantharama@email.com">
+                      <input type="hidden" name="_subject" value="Contact request from personal website" />
+                      <input type="email" name="_replyto" placeholder="Your email" required>
+                      <textarea name="message" placeholder="Your message" required></textarea>
+                      <button class="btn btn-light" type="submit">Send</button>
+                  </form>
+              </div>
           </div>
         </div>
       </div>
@@ -154,21 +152,21 @@
           Web Developer, Programmer, Tech Geek & Enthusiast...
         </h2>
         <div class="icons">
-          <a href="https://instagram.com/rahulanantharama">
+          <a href="https://instagram.com/rahulanantharama" target="_blank">
             <i class="fab fa-instagram fa-2x"></i>
           </a>
-          <a href="https://www.facebook.com/rahul.ananth">
+          <a href="https://www.facebook.com/rahul.ananth" target="_blank">
             <i class="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="https://linkedin.com/in/rahulanantharama">
+          <a href="https://linkedin.com/in/rahulanantharama" target="_blank">
             <i class="fab fa-linkedin fa-2x"></i>
           </a>
-          <a href="https://github.com/anrahulananth">
+          <a href="https://github.com/anrahulananth" target="_blank">
             <i class="fab fa-github fa-2x"></i>
           </a>
         </div>
         <div class="downloadResume">
-          <a href="/assets/rahul_resume.pdf" class="btn btn-light">
+          <a href="/assets/rahul_resume.pdf" class="btn btn-light" target="_blank">
              <div class="btn-content"><i class="fas fa-file-download"></i> Download Resume</div>
           </a>
         </div>

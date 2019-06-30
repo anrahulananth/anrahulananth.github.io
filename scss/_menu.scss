@@ -4,40 +4,46 @@
   z-index: 3;
   top: 35px;
   right: 35px;
+  border-radius: 4px;
+  background: #fff;
+  padding: 7px 7px 2px 7px;
   cursor: pointer;
-  @include easeOut;
-
-  .btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    background: $font-color;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+  
+  .menu-lines {
     @include easeOut;
-  }
-
-  //Rotate into X with Menu Lines
-  &.close {
-    transform: rotate(180deg);
-
     .btn-line {
-      //line1 - Rotate
-      &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      //line2 - Hide
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      //line 3 - Rotate
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: $secondary-color;
+      @include easeOut;
+    }
+
+    //Rotate into X with Menu Lines
+    &.close {
+      transform: rotate(180deg);
+
+      .btn-line {
+        //line1 - Rotate
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        //line2 - Hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        //line 3 - Rotate
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
       }
     }
-  }
 
-  &:hover > .btn-line {
-    background: $secondary-color;
-    @include easeOut();
+    &:hover > .btn-line {
+      background: $secondary-color;
+      @include easeOut();
+    }
   }
 }
 
@@ -68,7 +74,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: $primary-color;
     list-style-type: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -81,7 +87,7 @@
 
   //branding
   &-branding {
-    background: $primary-color;
+    background: darken($primary-color,30);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
     &.show {
@@ -113,7 +119,7 @@
       transform: translate3d(0, 0, 0);
     }
 
-    .nav-link.current  {
+    .nav-link.current {
       color: $secondary-color;
     }
   }
@@ -137,7 +143,7 @@
 }
 
 //delay each nav item slide by 0.1s
-@for $x from 1 through 4 {
+@for $x from 1 through 5 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
   }

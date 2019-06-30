@@ -29,7 +29,8 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    border-radius: 5px;
+    background: rgba(darken($primary-color, 2), 0.5);
   }
 }
 
@@ -94,7 +95,9 @@ section > *:target ~ * {
       width: 250px;
       left: 50%;
       margin-left: -125px;
-      .btn-light{
+      
+      .btn-light {
+        box-shadow: 0 3px 33px 0 rgba($font-color, 0.8);
         border: 3px solid $secondary-color;
         border-radius: 30px;
         .btn-content {
@@ -116,8 +119,7 @@ section > *:target ~ * {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job1 job1";
+    "bioimage bio bio";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -133,18 +135,35 @@ section > *:target ~ * {
     grid-area: bio;
     font-size: 1.5rem;
     &-details{
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       background: rgba(lighten($primary-color, 2), 0.5);
     }
   }
+}
 
-  .job-1 {
-    grid-area: job1;
-  }
-
-  .job {
-    background: lighten($primary-color, 5);
-    padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+//skills 
+.skill-list{
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $secondary-color;
+    background: $font-color;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+    @include easeOut;
+    &:hover {
+      background: $secondary-color;
+      color: $font-color;
+      transform: scale(1.2);
+      @include easeOut;
+    }
   }
 }
 
@@ -152,7 +171,7 @@ section > *:target ~ * {
 .contact-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "contact1 contact2 contact3";
+  grid-template-areas: "contact1 contact2 contact2";
   grid-template-columns: repeat(3, 1fr);
 
   .contact-1 {
@@ -163,18 +182,56 @@ section > *:target ~ * {
     grid-area: contact2;
   }
 
-  .contact-3 {
-    grid-area: contact3;
-  }
-
   .contact {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+
+    #contact-form{
+      margin: 2vh auto;
+      input, textarea{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        margin-bottom: 10px;
+        background: darken($primary-color, 30);
+        color: $font-color;
+        @include easeOut;
+
+        &::placeholder {
+          color: $font-color;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+      }
+
+      textarea{
+        height: 20vh;
+        width: 100%;
+        max-width: 100%;
+        min-height: 20vh;
+        resize: none;
+      }
+
+      button {
+        width: 100%;
+        background: $font-color;
+        border-radius: 4px;
+        padding: 5px 10px;
+        border: none;
+        color: $primary-color;
+        font-weight: 700;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        @include easeOut
+      }
+    }
   }
 }
 
-//work
+//experience
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -213,13 +270,13 @@ section > *:target ~ * {
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
-  color: $font-color;
+  color: $secondary-color;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  background: rgba($secondary-color, $background-opacity);
   color: $font-color;
   height: 60px;
 }

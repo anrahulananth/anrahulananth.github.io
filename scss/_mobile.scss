@@ -17,7 +17,7 @@
   .main {
     align-items: center;
     text-align: center;
-    padding: 3rem;
+    padding: 1rem;
 
     .lg-heading {
       font-size: 4rem;
@@ -28,8 +28,12 @@
   }
 
   .menu-btn {
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
+    .btn-line {
+      width: 18px;
+      height: 2.5px;
+    }
   }
 
   .menu {
@@ -69,10 +73,7 @@
   .about-info {
     grid-template-areas:
       "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
+      "bio";
 
     grid-template-columns: 1fr;
 
@@ -85,8 +86,7 @@
   .contact-info {
     grid-template-areas:
       "contact1"
-      "contact2"
-      "contact3";
+      "contact2";
 
     grid-template-columns: 1fr;
   }
