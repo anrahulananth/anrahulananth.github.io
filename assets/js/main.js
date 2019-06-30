@@ -1,11 +1,12 @@
 window.onload = (function(){
+    //remove no-js class support
+    document.body.classList.remove('no-js');
     //Select DOM Items
     const menuBtn = document.querySelector('.menu-lines');
     const menu = document.querySelector('.menu');
     const menuNav = document.querySelector('.menu-nav');
     const menuBranding = document.querySelector('.menu-branding');
     const navItems = document.querySelectorAll('.nav-item');
-    const experiences = document.querySelectorAll('#experience-timeline div');
 
     //set initial state of menu
     let showMenu = false;
@@ -46,16 +47,7 @@ window.onload = (function(){
         currentLink = event.target;
         toggleMenu();
     }
-
-    experiences.forEach(function(item){
-        item.classList.add('vtimeline-container')
-    });
-
-    let timelineContainer = document.querySelectorAll('.vtimeline-container');
-
-    timelineContainer.forEach(function(item){
-
-    });
-
+    //hide loader
+    document.querySelector('.loader').classList.add('hide');
 })();
 

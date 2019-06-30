@@ -129,6 +129,51 @@ body {
       width: 100vw;
       height: 100vh;
       background: rgba(52, 152, 219, 0.6); }
+  body.no-js .menu-btn {
+    display: none; }
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  background: #fff; }
+  .loader .lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px; }
+  .loader .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #3498db;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #3498db transparent transparent transparent; }
+  .loader .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s; }
+  .loader .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s; }
+  .loader .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s; }
+  .loader.hide {
+    display: none; }
 
 h1,
 h2,
@@ -293,17 +338,85 @@ section > *:target ~ * {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transition: all 0.5s ease-out; }
 
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px #3498db solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #040d1b;
-      transition: all 0.5s ease-out; }
+#experience-timeline {
+  margin: 30px auto 0 auto;
+  position: relative;
+  max-width: 1000px; }
+  #experience-timeline:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 303px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    background: #fff;
+    z-index: 0; }
+  #experience-timeline:after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 40px;
+    background: #fff;
+    background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+    top: 100%;
+    left: 303px; }
+
+.vtimeline-content {
+  margin-left: 350px;
+  background: #fff;
+  border-bottom: 5px solid #040d1b;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: left; }
+  .vtimeline-content h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #040d1b;
+    display: inline-block;
+    margin: 0; }
+  .vtimeline-content h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #040d1b;
+    margin: 0 0 15px 0; }
+  .vtimeline-content p {
+    color: #3498db;
+    font-size: 0.9em;
+    margin: 0; }
+
+.vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px; }
+
+.vtimeline-icon {
+  position: relative;
+  color: #040d1b;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  float: left;
+  z-index: 1;
+  margin-left: 280px;
+  text-align: center;
+  vertical-align: center; }
+  .vtimeline-icon i {
+    display: block;
+    font-size: 2em;
+    margin: 10px auto; }
+
+.vtimeline-date {
+  width: 260px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: 500;
+  color: #040d1b; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -328,14 +441,6 @@ section > *:target ~ * {
   background: rgba(4, 13, 27, 0.6);
   color: #fff;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   .main {
@@ -383,11 +488,25 @@ section > *:target ~ * {
   .contact-info {
     grid-template-areas: "contact1" "contact2";
     grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  #experience-timeline:before, #experience-timeline:after {
+    left: 23px; }
+  #experience-timeline:before {
+    top: 50px;
+    height: 75%; }
+  #experience-timeline:after {
+    top: 85%; }
+  .vtimeline-date {
+    width: auto;
+    text-align: left;
+    position: relative;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: 70px; }
+  .vtimeline-icon {
+    margin-left: 0; }
+  .vtimeline-content {
+    margin-left: 70px; } }
 
 @media screen and (max-width: 500px) {
   .main .lg-heading {
-    font-size: 4rem; }
-  .projects {
-    grid-template-columns: 1fr; } }
+    font-size: 4rem; } }

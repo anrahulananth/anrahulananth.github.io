@@ -1,15 +1,11 @@
 // Widescreens
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
-  }
+
 }
 
 // Desktop
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
 
 // Tablet
@@ -91,8 +87,35 @@
     grid-template-columns: 1fr;
   }
 
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
+  #experience-timeline {
+    &:before, &:after {
+        left: 23px;
+    }
+    &:before{
+      top: 50px;
+      height: 75%;
+    }
+
+    &:after{
+      top: 85%;
+    }
+  }
+
+  .vtimeline-date {
+      width: auto;
+      text-align: left;
+      position: relative;
+      margin-bottom: 15px;
+      display: block;
+      margin-left: 70px;
+  }
+
+  .vtimeline-icon {
+      margin-left: 0;
+  }
+
+  .vtimeline-content {
+      margin-left: 70px;
   }
 }
 
@@ -102,9 +125,5 @@
     .lg-heading {
       font-size: 4rem;
     }
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
   }
 }

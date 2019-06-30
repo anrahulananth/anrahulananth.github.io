@@ -13,6 +13,65 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  &.no-js{
+    .menu-btn{
+      display: none;
+    }
+  }
+}
+
+//loader
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  background: $font-color;
+  .lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left:50%;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid $primary-color;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: $primary-color transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  &.hide{
+    display:none;
+  }
 }
 
 // Headings
@@ -231,22 +290,100 @@ section > *:target ~ * {
   }
 }
 
-//experience
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+#experience-timeline {
+  margin: 30px auto 0 auto;
+  position: relative;
+  max-width: 1000px;
 
-  img {
-    width: 100%;
-    border: 3px $primary-color solid;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
+  &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 303px;
+      right: auto;
+      height: 100%;
+      width: 3px;
+      background: $font-color;
+      z-index: 0;
   }
+
+  &:after {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 40px;
+      background: $font-color;
+      background: linear-gradient(to bottom, $font-color, rgba($font-color, 0));
+      top: 100%;
+      left: 303px;
+  }
+}
+
+.vtimeline-content {
+  margin-left: 350px;
+  background: $font-color;
+  border-bottom: 5px solid $secondary-color;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: left;
+
+  h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: $secondary-color;
+      display: inline-block;
+      margin: 0;
+  }
+
+  h4 {
+      font-size: 1.2em;
+      font-weight: 300;
+      color: $secondary-color;
+      margin: 0 0 15px 0;
+  }
+
+  p {
+      color: $primary-color;
+      font-size: 0.9em;
+      margin: 0;
+  }
+}
+
+.vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+  position: relative;
+  color: $secondary-color;
+  width: 50px;
+  height: 50px;
+  background: $font-color;
+  border-radius: 50%;
+  float: left;
+  z-index: 1;
+  margin-left: 280px;
+  text-align: center;
+  vertical-align: center;
+  i {
+      display: block;
+      font-size: 2em;
+      margin: 10px auto;
+  }
+}
+
+.vtimeline-date {
+  width: 260px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: 500;
+  color: $secondary-color;
 }
 
 //button styles

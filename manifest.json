@@ -1,0 +1,21 @@
+{
+  "short_name": "Rahul",
+  "name": "Rahul Ananth",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#3498db",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3498db"
+}
