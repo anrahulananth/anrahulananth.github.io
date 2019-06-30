@@ -4,15 +4,15 @@ $font-color: #4287f5;
 // $primary-color: #444;
 // $secondary-color: #eece1a;
 // $font-color: #fff;
-$home-image: url("../img/background.jpg");
+$home-image: url("/assets/img/background.jpg");
 $show-home-image: true;
 $background-opacity: 0.6;
 $menu-opacity: 0.95;
-$portrait-image: url("../img/portrait.jpeg");
-$portrait-small-image: url("../img/portrait_small.jpeg");
+$portrait-image: url("/assets/img/portrait.jpeg");
+$portrait-small-image: url("/assets/img/portrait_small.jpeg");
 
 @mixin easeOut {
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @mixin background {
@@ -28,8 +28,8 @@ $portrait-small-image: url("../img/portrait_small.jpeg");
         content: "";
         top: 0px;
         left: 0px;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: rgba($primary-color, $background-opacity);
       }
     }

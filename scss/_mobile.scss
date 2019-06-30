@@ -1,77 +1,110 @@
 // Widescreens
 @include mediaXl {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktop
 @include mediaLg {
-    .main {
-        align-items: center;
-        text-align: center;
-
-        .lg-heading {
-            font-size: 4rem;
-            line-height: 1;
-            margin-top: 10vh;
-            margin-bottom:  1 rem;
-        }
-    }
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablet
 @include mediaMd {
-    .main {
-        align-items: center;
-        text-align: center;
+  .main {
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
 
-        .lg-heading {
-            font-size: 4rem;
-            line-height: 1;
-            margin-top: 10vh;
-            margin-bottom:  1 rem;
-        }
+    .lg-heading {
+      font-size: 4rem;
+      line-height: 1;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .menu-btn {
+    top: 15px;
+    right: 15px;
+  }
+
+  .menu {
+    .menu-nav,
+    .menu-branding {
+      float: none;
+      width: 100%;
+      min-height: 0;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
     }
 
-    .menu {
-        .menu-nav, .menu-branding {
-            float: none;
-            width: 100%;
-            min-height: 0;
+    .menu-nav {
+      height: 65vh;
+      transform: translate3d(-100%, 0, 0);
+      font-size: 24px;
 
-            &.show {
-                transform: translate3d(0,0,0);
-            }
-        }
-
-        .menu-nav {
-            height: 65vh;
-            transform: translate3d(-100%, 0, 0);
-            font-size: 24px;
-
-            .nav-link{
-                font-size: 24px;
-            }
-        }
-
-        .menu-branding {
-            height: 35vh;
-            transform: translate3d(100%, 0, 0);
-        }
-
-        .portrait {
-            width: 150px;
-            height: 150px;
-            background-size: 150px 150px;
-        }
+      .nav-link {
+        font-size: 24px;
+      }
     }
+
+    .menu-branding {
+      height: 35vh;
+      transform: translate3d(100%, 0, 0);
+    }
+
+    .portrait {
+      width: 150px;
+      height: 150px;
+      background-size: 150px 150px;
+    }
+  }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+
+    .bio-image {
+        height: 200px;
+        width: 200px;
+    }
+  }
+
+  .contact-info {
+    grid-template-areas:
+      "contact1"
+      "contact2"
+      "contact3";
+
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Mobiles
 @include mediaSm {
-    .main {
-        .lg-heading {
-            font-size: 2rem;
-        }
+  .main {
+    .lg-heading {
+      font-size: 4rem;
     }
-}
+  }
 
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
