@@ -185,15 +185,21 @@ section > *:target ~ * {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: $secondary-color 3px solid;
+    border: $font-color 3px solid;
     height: 250px;
     width: 250px;
+    @include easeOut;
+    &:hover{
+      border: $secondary-color 3px solid;
+      @include easeOut;
+    }
   }
 
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
     &-details{
+      padding: 1rem;
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       background: rgba(lighten($primary-color, 2), 0.5);
@@ -392,9 +398,11 @@ section > *:target ~ * {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  @include easeOut;
   &:hover {
     background: $font-color;
     color: $primary-color;
+    @include easeOut;
   }
 }
 
