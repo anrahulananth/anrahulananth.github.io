@@ -179,7 +179,9 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 400;
+  align-items: center;
+  text-align: center; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
@@ -189,8 +191,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    border-radius: 5px;
-    background: rgba(43, 148, 217, 0.5); }
+    border-radius: 5px; }
 
 a {
   color: #fff;
@@ -219,7 +220,9 @@ section > *:target ~ * {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   .main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center; }
     .main .icons a {
       padding: 0.4rem;
       height: 32px;
@@ -327,10 +330,10 @@ section > *:target ~ * {
           color: #fff;
           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
       .contact-info .contact #contact-form textarea {
-        height: 20vh;
+        height: 25vh;
         width: 100%;
         max-width: 100%;
-        min-height: 20vh;
+        min-height: 25vh;
         resize: none; }
       .contact-info .contact #contact-form button {
         width: 100%;
