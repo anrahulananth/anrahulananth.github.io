@@ -88,16 +88,12 @@
   }
 
   #experience-timeline {
-    &:before, &:after {
+    &:before{
         left: 23px;
     }
     &:before{
       top: 50px;
-      height: 75%;
-    }
-
-    &:after{
-      top: 84%;
+      height: 90%;
     }
   }
 

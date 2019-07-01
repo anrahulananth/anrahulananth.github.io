@@ -310,19 +310,8 @@ section > *:target ~ * {
       right: auto;
       height: 100%;
       width: 3px;
-      background: $font-color;
+      background: linear-gradient(to bottom, $font-color, rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 0.5), rgba($font-color, 0));
       z-index: 0;
-  }
-
-  &:after {
-      position: absolute;
-      content: '';
-      width: 3px;
-      height: 40px;
-      background: $font-color;
-      background: linear-gradient(to bottom, $font-color, rgba($font-color, 0));
-      top: 100%;
-      left: 303px;
   }
 }
 

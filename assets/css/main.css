@@ -356,17 +356,8 @@ section > *:target ~ * {
     right: auto;
     height: 100%;
     width: 3px;
-    background: #fff;
+    background: linear-gradient(to bottom, #fff, white, white, white, white, white, white, white, white, white, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
     z-index: 0; }
-  #experience-timeline:after {
-    position: absolute;
-    content: '';
-    width: 3px;
-    height: 40px;
-    background: #fff;
-    background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
-    top: 100%;
-    left: 303px; }
 
 .vtimeline-content {
   margin-left: 350px;
@@ -495,13 +486,11 @@ section > *:target ~ * {
   .contact-info {
     grid-template-areas: "contact1" "contact2";
     grid-template-columns: 1fr; }
-  #experience-timeline:before, #experience-timeline:after {
+  #experience-timeline:before {
     left: 23px; }
   #experience-timeline:before {
     top: 50px;
-    height: 75%; }
-  #experience-timeline:after {
-    top: 84%; }
+    height: 90%; }
   .vtimeline-date {
     width: auto;
     text-align: left;
