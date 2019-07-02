@@ -55,7 +55,8 @@ window.onload = (function() {
     if (navigator.share) {
       navigator.share({
         title: 'Rahul Ananth - My Portfolio',
-        url: 'https://anrahulananth.github.io'
+        url: 'https://anrahulananth.github.io',
+        text: 'My Porfolio Site'
       })
     } else {
       
