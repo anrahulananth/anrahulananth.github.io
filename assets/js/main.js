@@ -7,7 +7,6 @@ window.onload = (function() {
   var menuNav = document.querySelector(".menu-nav");
   var menuBranding = document.querySelector(".menu-branding");
   var navItems = document.querySelectorAll(".nav-item");
-  var shareIcon = document.querySelector(".share-icon");
 
   //set initial state of menu
   var showMenu = false;
@@ -51,21 +50,10 @@ window.onload = (function() {
     toggleMenu();
   }
 
-  shareIcon.addEventListener('click', event => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Rahul Ananth - My Portfolio',
-        url: 'https://anrahulananth.github.io',
-        text: 'My Porfolio Site'
-      })
-    } else {
-      
-    }
-  });
-
-  //hide loader
   document.addEventListener("readystatechange", function(event) {
     if (event.target.readyState === "complete") {
+
+      //Hide Loader
       document.querySelector(".loader").classList.add("hide");
 
       var TxtType = function(el, toRotate, period) {
@@ -120,11 +108,14 @@ window.onload = (function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
       }
-      // INJECT CSS
+
+      //inject css
       var css = document.createElement("style");
       css.type = "text/css";
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
       document.body.appendChild(css);
+
+      
     }
   });
 })();

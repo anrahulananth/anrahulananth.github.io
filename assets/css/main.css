@@ -149,7 +149,7 @@ body {
       left: 0px;
       width: 100vw;
       height: 100vh;
-      background: rgba(52, 152, 219, 0.6); }
+      background: rgba(52, 152, 219, 0.8); }
   body.no-js .menu-btn {
     display: none; }
 
@@ -461,7 +461,7 @@ section > *:target ~ * {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: rgba(4, 13, 27, 0.6);
+  background: rgba(4, 13, 27, 0.8);
   color: #fff;
   height: 60px; }
 
