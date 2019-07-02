@@ -7,6 +7,7 @@ window.onload = (function() {
   var menuNav = document.querySelector(".menu-nav");
   var menuBranding = document.querySelector(".menu-branding");
   var navItems = document.querySelectorAll(".nav-item");
+  var shareIcon = document.querySelector(".share-icon");
 
   //set initial state of menu
   var showMenu = false;
@@ -49,6 +50,17 @@ window.onload = (function() {
     currentLink = event.target;
     toggleMenu();
   }
+
+  shareIcon.addEventListener('click', event => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Rahul Ananth - My Portfolio',
+        url: 'https://anrahulananth'
+      })
+    } else {
+      
+    }
+  });
 
   //hide loader
   document.addEventListener("readystatechange", function(event) {

@@ -4,7 +4,11 @@ $font-color: #fff;
 // $primary-color: #444;
 // $secondary-color: #eece1a;
 // $font-color: #fff;
-$home-image: url("/assets/img/background.jpg");
+$background-image-1: url("/assets/img/background1.jpg");
+$background-image-2: url("/assets/img/background2.jpg");
+$background-image-3: url("/assets/img/background3.jpg");
+$background-image-4: url("/assets/img/background4.jpg");
+
 $show-home-image: true;
 $background-opacity: 0.6;
 $menu-opacity: 0.95;
@@ -14,13 +18,44 @@ $portrait-image: url("/assets/img/portrait.jpeg");
   transition: all 0.5s ease-out;
 }
 
+@keyframes backgroundChange {
+  0% {
+    background: $background-image-1;
+  }
+  25% {
+    background: $background-image-2;
+  }
+  50% {
+    background: $background-image-3;
+  }
+  75% {
+    background: $background-image-4;
+  }
+  100% {
+    background: $background-image-1;
+  }
+}
+
+@mixin changeBackGround {
+  animation: backgroundChange 20s infinite;
+}
+
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: $home-image;
       background-attachment: fixed;
       background-size: cover;
-
+      @include changeBackGround;
+      &:before {
+        position: fixed;
+        z-index: -1;
+        content: "";
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        background: $background-image-1, $background-image-2, $background-image-3, $background-image-4;
+      }
       &:after {
         position: fixed;
         z-index: -1;
