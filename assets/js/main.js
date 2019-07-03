@@ -5,14 +5,18 @@ window.addEventListener("load", function() {
       menu && menu.classList.add("show");
       menuNav && menuNav.classList.add("show");
       menuBranding && menuBranding.classList.add("show");
-      navItems && navItems.length && navItems.forEach(handleAddClass);
+      for (var i = 0; i < navItems.length; i++) {
+        handleAddClass(navItems[i]);
+      }
       showMenu = true;
     } else {
       menuBtn.classList.remove("close");
       menu && menu.classList.remove("show");
       menuNav && menuNav.classList.remove("show");
       menuBranding && menuBranding.classList.remove("show");
-      navItems && navItems.length && navItems.forEach(handleRemoveClass);
+      for (var i = 0; i < navItems.length; i++) {
+        handleRemoveClass(navItems[i]);
+      }
       showMenu = false;
     }
   }
@@ -47,8 +51,9 @@ window.addEventListener("load", function() {
 
   //set initial state of menu
   var showMenu = false;
-  console.log(navItems, navItems.length, navItems.forEach);
-  navItems && navItems.length && navItems.forEach(handleClick);
+  for (var i = 0; i < navItems.length; i++) {
+    handleClick(navItems[i]);
+  }
   var currentLink = document.querySelector(
     `a[href="${window.location.hash == "" ? "/" : window.location.hash}"]`
   );
