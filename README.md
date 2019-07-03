@@ -7,7 +7,7 @@ Inspired by Brad Traversy's Portfolio Tutorial.
 
 ## Development
 
-Use Liver Server VSCode Extension to serve the HTML and run the following command to build the CSS from SCSS
+Use Live Server VSCode Extension to serve the HTML and run the following command to build the CSS from SCSS
 
 `npm run sass` 
 
