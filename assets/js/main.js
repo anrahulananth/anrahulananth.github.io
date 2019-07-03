@@ -23,18 +23,14 @@ window.onload = (function() {
       menu && menu.classList.add("show");
       menuNav && menuNav.classList.add("show");
       menuBranding && menuBranding.classList.add("show");
-      navItems &&
-        navItems.length &&
-        navItems.forEach(handleAddClass);
+      navItems && navItems.length && navItems.forEach(handleAddClass);
       showMenu = true;
     } else {
       menuBtn.classList.remove("close");
       menu && menu.classList.remove("show");
       menuNav && menuNav.classList.remove("show");
       menuBranding && menuBranding.classList.remove("show");
-      navItems &&
-        navItems.length &&
-        navItems.forEach(handleRemoveClass);
+      navItems && navItems.length && navItems.forEach(handleRemoveClass);
       showMenu = false;
     }
   }
@@ -43,13 +39,11 @@ window.onload = (function() {
     item.classList.add("show");
   }
 
-  function handleRemoveClass(item){
+  function handleRemoveClass(item) {
     item.classList.remove("show");
   }
 
-  navItems &&
-    navItems.length &&
-    navItems.forEach(handleClick);
+  navItems && navItems.length && navItems.forEach(handleClick);
 
   function handleClick(item) {
     item && item.addEventListener("click", handleMenu);
