@@ -94,8 +94,116 @@ $portrait-image: url("/assets/img/portrait.webp");
   }
 }
 
+//font awesome icons
 @font-face {
-  font-family: 'SeSegoe UI';
-  font-display: auto;
-  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  font-display:auto;src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.eot);
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display:auto;src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.eot);
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands"
+}
+
+.fab, .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1
+}
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: .75em;
+  vertical-align: -.0667em
+}
+
+.fa-xs {
+  font-size: .75em
+}
+
+.fa-sm {
+  font-size: .875em
+}
+
+.fa-1x {
+  font-size: 1em
+}
+
+.fa-2x {
+  font-size: 2em
+}
+
+.fa-3x {
+  font-size: 3em
+}
+
+.fa-4x {
+  font-size: 4em
+}
+
+.fa-5x {
+  font-size: 5em
+}
+
+.fa-6x {
+  font-size: 6em
+}
+
+.fa-7x {
+  font-size: 7em
+}
+
+.fa-8x {
+  font-size: 8em
+}
+
+.fa-9x {
+  font-size: 9em
+}
+
+.fa-10x {
+  font-size: 10em
+}
+
+.fa-share-alt-square:before {
+  content: "\f1e1"
+}
+
+.fa-instagram:before {
+  content: "\f16d"
+}
+
+.fa-facebook-square:before {
+  content: "\f082"
+}
+
+.fa-linkedin:before {
+  content: "\f08c"
+}
+
+.fa-github-square:before {
+  content: "\f092"
+}
+
+.fa-reddit-square:before {
+  content: "\f1a2"
 }
