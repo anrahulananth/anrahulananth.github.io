@@ -577,4 +577,4 @@ section > *:target ~ * {
 
 @media screen and (max-width: 500px) {
   .main .lg-heading {
-    font-size: 4rem; } }
+    font-size: 3rem; } }
