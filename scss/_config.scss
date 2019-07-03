@@ -4,15 +4,15 @@ $font-color: #fff;
 // $primary-color: #444;
 // $secondary-color: #eece1a;
 // $font-color: #fff;
-$background-image-1: url("/assets/img/background1.jpg");
-$background-image-2: url("/assets/img/background2.jpg");
-$background-image-3: url("/assets/img/background3.jpg");
-$background-image-4: url("/assets/img/background4.jpg");
+$background-image-1: url("/assets/img/background1.webp");
+$background-image-2: url("/assets/img/background2.webp");
+$background-image-3: url("/assets/img/background3.webp");
+$background-image-4: url("/assets/img/background4.webp");
 
 $show-home-image: true;
 $background-opacity: 0.8;
 $menu-opacity: 0.95;
-$portrait-image: url("/assets/img/portrait.jpeg");
+$portrait-image: url("/assets/img/portrait.webp");
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -46,7 +46,7 @@ $portrait-image: url("/assets/img/portrait.jpeg");
       background-attachment: fixed;
       background-size: cover;
       @include changeBackGround;
-      &:before {
+      .preload {
         position: fixed;
         z-index: -1;
         content: "";
@@ -92,4 +92,10 @@ $portrait-image: url("/assets/img/portrait.jpeg");
   @media screen and (min-width: 1171px) {
     @content;
   }
+}
+
+@font-face {
+  font-family: 'SeSegoe UI';
+  font-display: auto;
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/rC7kKhY-eUDY-ucISTIf5PesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
 }

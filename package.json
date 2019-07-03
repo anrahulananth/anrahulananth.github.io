@@ -4,7 +4,8 @@
   "description": "My Portfolio Site",
   "main": "assets/js/main.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o assets/css/ --recursive"
+    "build": "node-sass scss/ -o assets/css/ -r --output-style compressed",
+    "sass": "node-sass -w scss/ -o assets/css/ -r"
   },
   "repository": {
     "type": "git",

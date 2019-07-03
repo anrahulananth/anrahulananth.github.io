@@ -12,7 +12,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Rahul Anantharama - My Portfolio">
     <meta name="msapplication-TileColor" content="#3498db">
-    <meta name="msapplication-TileImage" content="/assets/img/portrait.jpeg">
+    <meta name="msapplication-TileImage" content="https://anrahulananth.github.io/assets/img/portrait.jpeg">
     <meta name="msapplication-navbutton-color" content="#3498db">
     <meta name="msapplication-starturl" content="https://anrahulananth.github.io">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,6 @@
     <meta name="title" content="Rahul Anantharama - My Portfolio"/>
     <meta name="description" content="My Portfolio Site"/>
     <meta name="keywords" content="React, Front End Developer, JavaScript, Web Development, Portfolio"/>
-    <meta name="google-site-verification" content="c8oMAFygsS23-hr9Syr62aVdiGgdYO6U7Z5AasikzXM" />
 
     <!--icons-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -44,14 +43,14 @@
 
     <!--facebook-->
     <meta property="og:title" content="Rahul Anantharama - My Portfolio">
-    <meta property="og:image" content="/assets/img/portrait.jpeg">
+    <meta property="og:image" content="https://anrahulananth.github.io/assets/img/portrait.jpeg">
     <meta property="og:url" content="https://anrahulananth.github.io"/>
     <meta property="og:description" content="My Portfolio Site"/>
     <meta property="og:site_name" content="Rahul Anantharama"/>
 
     <!--twitter-->
     <meta property="twitter:title" content="Rahul Anantharama - My Portfolio"/>
-    <meta property="twitter:image" content="/assets/img/portrait.jpeg"/>
+    <meta property="twitter:image" content="https://anrahulananth.github.io/assets/img/portrait.jpeg"/>
     <meta property="twitter:url" content="https://anrahulananth.github.io"/>
     
     <title>Rahul Anantharama - My Portfolio</title>
@@ -80,11 +79,17 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css"
       crossorigin="anonymous"
     />
   </head>
   <body id="bg-img" class="no-js">
+    <div class="preload"></div>
     <div class="loader">
         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
     </div>
@@ -122,7 +127,7 @@
         <h1 class="lg-heading">About</h1>
         <div class="about-info">
           <img
-            src="/assets/img/portrait.jpeg"
+            src="/assets/img/portrait.webp"
             alt="Rahul Anantharama"
             class="bio-image"
           />
@@ -305,6 +310,6 @@
     <footer id="main-footer">
       Copyright &copy; Rahul Anantharama 2019
     </footer>
-    <script src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/main.js"></script>
   </body>
 </html>
