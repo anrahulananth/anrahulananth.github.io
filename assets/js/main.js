@@ -25,9 +25,7 @@ window.onload = (function() {
       menuBranding && menuBranding.classList.add("show");
       navItems &&
         navItems.length &&
-        navItems.forEach(function(item) {
-          item.classList.add("show");
-        });
+        navItems.forEach(handleAddClass);
       showMenu = true;
     } else {
       menuBtn.classList.remove("close");
@@ -36,18 +34,26 @@ window.onload = (function() {
       menuBranding && menuBranding.classList.remove("show");
       navItems &&
         navItems.length &&
-        navItems.forEach(function(item) {
-          item.classList.remove("show");
-        });
+        navItems.forEach(handleRemoveClass);
       showMenu = false;
     }
   }
 
+  function handleAddClass(item) {
+    item.classList.add("show");
+  }
+
+  function handleRemoveClass(item){
+    item.classList.remove("show");
+  }
+
   navItems &&
     navItems.length &&
-    navItems.forEach(function(item) {
-      item && item.addEventListener("click", handleMenu);
-    });
+    navItems.forEach(handleClick);
+
+  function handleClick(item) {
+    item && item.addEventListener("click", handleMenu);
+  }
 
   function handleMenu(event) {
     currentLink && currentLink.classList.remove("current");
