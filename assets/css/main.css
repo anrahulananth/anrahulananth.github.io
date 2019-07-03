@@ -163,7 +163,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
   top: 0px;
   left: 0px;
   background: #fff; }
@@ -286,6 +286,7 @@ section > *:target ~ * {
     border: #fff 3px solid;
     height: 250px;
     width: 250px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12);
     transition: all 0.5s ease-out; }
     .about-info .bio-image:hover {
       border: #040d1b 3px solid;
@@ -313,6 +314,7 @@ section > *:target ~ * {
     list-style: none;
     cursor: default;
     font-size: 1.2em;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.5s ease-out; }
     .skill-list li:hover {
       background: #040d1b;
@@ -338,7 +340,8 @@ section > *:target ~ * {
     text-align: center; }
     .contact-info .contact #contact-form {
       margin: 2vh auto; }
-      .contact-info .contact #contact-form input, .contact-info .contact #contact-form textarea {
+      .contact-info .contact #contact-form input,
+      .contact-info .contact #contact-form textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -348,7 +351,8 @@ section > *:target ~ * {
         background: #124364;
         color: #fff;
         transition: all 0.5s ease-out; }
-        .contact-info .contact #contact-form input::placeholder, .contact-info .contact #contact-form textarea::placeholder {
+        .contact-info .contact #contact-form input::placeholder,
+        .contact-info .contact #contact-form textarea::placeholder {
           color: #fff;
           font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
       .contact-info .contact #contact-form textarea {
@@ -374,7 +378,7 @@ section > *:target ~ * {
   max-width: 1000px; }
   #experience-timeline:before {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     bottom: 0;
     left: 303px;
@@ -464,6 +468,49 @@ section > *:target ~ * {
   background: rgba(4, 13, 27, 0.8);
   color: #fff;
   height: 60px; }
+
+.share-overlay {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  visibility: hidden;
+  transition: all 0.5s ease-out; }
+  .share-overlay.show {
+    visibility: visible;
+    transition: all 0.5s ease-out; }
+    .share-overlay.show .share-popup {
+      visibility: visible;
+      transform: translate3d(0, 0, 0); }
+
+.share-popup {
+  transition: all 0.5s ease-out;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  opacity: 0.95;
+  visibility: hidden;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  transform: translate3d(0, 100%, 0);
+  background: #fff;
+  color: #040d1b; }
+  .share-popup a {
+    color: #040d1b;
+    padding: 0.4rem;
+    height: 32px;
+    width: 32px; }
+    .share-popup a:hover {
+      color: #3498db;
+      transition: all 0.5s ease-out; }
 
 @media screen and (max-width: 768px) {
   .main {

@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
   function toggleMenu() {
     if (!showMenu) {
-      menuBtn.classList.add("close");
+      menuLines.classList.add("close");
       menu && menu.classList.add("show");
       menuNav && menuNav.classList.add("show");
       menuBranding && menuBranding.classList.add("show");
@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
       }
       showMenu = true;
     } else {
-      menuBtn.classList.remove("close");
+      menuLines.classList.remove("close");
       menu && menu.classList.remove("show");
       menuNav && menuNav.classList.remove("show");
       menuBranding && menuBranding.classList.remove("show");
@@ -28,10 +28,6 @@ window.addEventListener("load", function() {
     toggleMenu();
   }
 
-  function handleClick(item) {
-    item && item.addEventListener("click", handleMenu);
-  }
-
   function handleAddClass(item) {
     item.classList.add("show");
   }
@@ -43,16 +39,20 @@ window.addEventListener("load", function() {
   //remove no-js class support
   document.body.classList.remove("no-js");
   //Select DOM Items
-  var menuBtn = document.querySelector(".menu-lines");
+  var menuBtn = document.querySelector(".menu-btn");
+  var menuLines = document.querySelector(".menu-lines");
   var menu = document.querySelector(".menu");
   var menuNav = document.querySelector(".menu-nav");
   var menuBranding = document.querySelector(".menu-branding");
   var navItems = document.querySelectorAll(".nav-item");
+  var shareIcon = document.querySelector(".share-icon");
+  var sharePopup = document.querySelector(".share-popup");
+  var shareOverlay = document.querySelector(".share-overlay");
 
   //set initial state of menu
   var showMenu = false;
   for (var i = 0; i < navItems.length; i++) {
-    handleClick(navItems[i]);
+    navItems[i] && navItems[i].addEventListener("click", handleMenu);
   }
   var currentLink = document.querySelector(
     `a[href="${window.location.hash == "" ? "/" : window.location.hash}"]`
@@ -115,6 +115,27 @@ window.addEventListener("load", function() {
       new TxtType(elements[i], JSON.parse(toRotate), period);
     }
   }
+
+  shareIcon.addEventListener("click", function() {
+    if (navigator.share) {
+      navigator.share({
+        title: "Rahul Ananth",
+        url: "https://anrahulananth.github.io",
+        text: "My Porfolio Site - This site is developed using only pure JavaScript and SASS without any frameworks!"
+      });
+    } else {
+      shareOverlay.classList.add("show");
+    }
+  });
+
+  shareOverlay.addEventListener("click", function(event){
+      if(event.target.className.includes('share-overlay')){
+        shareOverlay.classList.remove("show");
+        return false;
+      } else {
+        shareOverlay.classList.remove("show");
+      }    
+  });
 
   //inject css
   var css = document.createElement("style");

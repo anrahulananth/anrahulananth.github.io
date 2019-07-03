@@ -13,8 +13,8 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  &.no-js{
-    .menu-btn{
+  &.no-js {
+    .menu-btn {
       display: none;
     }
   }
@@ -34,7 +34,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 3;
+  z-index: 5;
   top: 0px;
   left: 0px;
   background: $font-color;
@@ -44,7 +44,7 @@ body {
     width: 64px;
     height: 64px;
     top: 50%;
-    left:50%;
+    left: 50%;
     margin-top: -32px;
     margin-left: -32px;
   }
@@ -69,8 +69,8 @@ body {
   .lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
   }
-  &.hide{
-    display:none;
+  &.hide {
+    display: none;
   }
 }
 
@@ -156,7 +156,7 @@ section > *:target ~ * {
       width: 250px;
       left: 50%;
       margin-left: -125px;
-      
+
       .btn-light {
         box-shadow: 0 3px 33px 0 rgba($font-color, 0.8);
         border: 3px solid $secondary-color;
@@ -179,8 +179,7 @@ section > *:target ~ * {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas:
-    "bioimage bio bio";
+  grid-template-areas: "bioimage bio bio";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -190,8 +189,9 @@ section > *:target ~ * {
     border: $font-color 3px solid;
     height: 250px;
     width: 250px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12);
     @include easeOut;
-    &:hover{
+    &:hover {
       border: $secondary-color 3px solid;
       @include easeOut;
     }
@@ -200,7 +200,7 @@ section > *:target ~ * {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
-    &-details{
+    &-details {
       padding: 1rem;
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -209,8 +209,8 @@ section > *:target ~ * {
   }
 }
 
-//skills 
-.skill-list{
+//skills
+.skill-list {
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -224,6 +224,7 @@ section > *:target ~ * {
     list-style: none;
     cursor: default;
     font-size: 1.2em;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
     @include easeOut;
     &:hover {
       background: $secondary-color;
@@ -257,9 +258,10 @@ section > *:target ~ * {
     border-radius: 5px;
     text-align: center;
 
-    #contact-form{
+    #contact-form {
       margin: 2vh auto;
-      input, textarea{
+      input,
+      textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -276,7 +278,7 @@ section > *:target ~ * {
         }
       }
 
-      textarea{
+      textarea {
         height: 25vh;
         width: 100%;
         max-width: 100%;
@@ -292,8 +294,8 @@ section > *:target ~ * {
         border: none;
         color: $primary-color;
         font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        @include easeOut
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        @include easeOut;
       }
     }
   }
@@ -305,16 +307,30 @@ section > *:target ~ * {
   max-width: 1000px;
 
   &:before {
-      position: absolute;
-      content: '';
-      top: 0;
-      bottom: 0;
-      left: 303px;
-      right: auto;
-      height: 100%;
-      width: 3px;
-      background: linear-gradient(to bottom, $font-color, rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 1), rgba($font-color, 0.5), rgba($font-color, 0));
-      z-index: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 303px;
+    right: auto;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(
+      to bottom,
+      $font-color,
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 1),
+      rgba($font-color, 0.5),
+      rgba($font-color, 0)
+    );
+    z-index: 0;
   }
 }
 
@@ -327,24 +343,24 @@ section > *:target ~ * {
   text-align: left;
 
   h3 {
-      font-size: 1.5em;
-      font-weight: 300;
-      color: $secondary-color;
-      display: inline-block;
-      margin: 0;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: $secondary-color;
+    display: inline-block;
+    margin: 0;
   }
 
   h4 {
-      font-size: 1.2em;
-      font-weight: 300;
-      color: $secondary-color;
-      margin: 0 0 15px 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: $secondary-color;
+    margin: 0 0 15px 0;
   }
 
   p {
-      color: $primary-color;
-      font-size: 0.9em;
-      margin: 0;
+    color: $primary-color;
+    font-size: 0.9em;
+    margin: 0;
   }
 }
 
@@ -368,9 +384,9 @@ section > *:target ~ * {
   text-align: center;
   vertical-align: center;
   i {
-      display: block;
-      font-size: 2em;
-      margin: 10px auto;
+    display: block;
+    font-size: 2em;
+    margin: 10px auto;
   }
 }
 
@@ -416,6 +432,55 @@ section > *:target ~ * {
   background: rgba($secondary-color, $background-opacity);
   color: $font-color;
   height: 60px;
+}
+
+//share popup
+.share-overlay{
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  height:100vh;
+  width: 100vw;
+  z-index: 3;
+  visibility: hidden;
+  @include easeOut();
+  &.show {
+    visibility: visible;
+    @include easeOut();
+    .share-popup {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+.share-popup {
+  @include easeOut;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  opacity: $menu-opacity;
+  visibility: hidden;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  transform: translate3d(0, 100%, 0);
+  background: $font-color;
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+    padding: 0.4rem;
+    height: 32px;
+    width: 32px;
+    &:hover {
+      color: $primary-color;
+      @include easeOut();
+    }
+  }
 }
 
 @import "mobile";

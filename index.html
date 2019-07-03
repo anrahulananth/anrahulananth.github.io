@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <!--app related-->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Rahul Ananth">
-    <meta name="apple-mobile-web-app-title" content="Rahul Ananth">
     <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3498db">
+    <meta name="apple-mobile-web-app-title" content="Rahul Ananth - My Portfolio">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Rahul Ananth - My Portfolio">
+    <meta name="msapplication-TileColor" content="#3498db">
+    <meta name="msapplication-TileImage" content="/assets/img/portrait.jpeg">
     <meta name="msapplication-navbutton-color" content="#3498db">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-starturl" content="https://anrahulananth.github.io">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow"/>
+    <meta name="title" content="Rahul Ananth - My Portfolio"/>
+    <meta name="description" content="My Portfolio Site"/>
+    <meta name="keywords" content="React, Front End Developer, JavaScript, Web Development, Portfolio"/>
+    <meta name="google-site-verification" content="c8oMAFygsS23-hr9Syr62aVdiGgdYO6U7Z5AasikzXM" />
+
+    <!--icons-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
@@ -31,21 +41,19 @@
     <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="icons/icon-152x152.png">
     <link rel="icon" type="image/png" sizes="128x128" href="icons/icon-128x128.png">
     <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="icons/icon-128x128.png">
-    <meta name="robots" content="index, follow"/>
-    <meta name="title" content="Rahul Ananth - My Portfolio"/>
-    <meta name="description" content="My Portfolio Site"/>
-    <meta name="keywords" content="React, Front End Developer, JavaScript, Web Development, Portfolio"/>
+
     <!--facebook-->
     <meta property="og:title" content="Rahul Ananth - My Portfolio">
     <meta property="og:image" content="/assets/img/portrait.jpeg">
     <meta property="og:url" content="https://anrahulananth.github.io"/>
     <meta property="og:description" content="My Portfolio Site"/>
     <meta property="og:site_name" content="Rahul Ananth"/>
+
     <!--twitter-->
     <meta property="twitter:title" content="Rahul Ananth - My Portfolio"/>
     <meta property="twitter:image" content="/assets/img/portrait.jpeg"/>
     <meta property="twitter:url" content="https://anrahulananth.github.io"/>
-    <meta name="google-site-verification" content="c8oMAFygsS23-hr9Syr62aVdiGgdYO6U7Z5AasikzXM" />
+    
     <title>Rahul Ananth - My Portfolio</title>
     <script type="application/ld+json">
       {
@@ -243,17 +251,20 @@
           <a class="share-icon" href="javascript:void(0)" title="Share my Portfolio" target="_self">
             <i class="fas fa-share-alt-square fa-2x"></i>
           </a>
-          <a href="https://instagram.com/rahulanantharama" title="Follow me on Instagram" target="_blank">
+          <a href="https://instagram.com/rahulanantharama" title="Follow me on Instagram" target="_self">
             <i class="fab fa-instagram fa-2x"></i>
           </a>
-          <a href="https://www.facebook.com/rahul.ananth" title="Send a request on Facebook" target="_blank">
+          <a href="https://www.facebook.com/rahul.ananth" title="Like me on Facebook" target="_self">
             <i class="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="https://linkedin.com/in/rahulanantharama" title="Check my profile on LinkedIn" target="_blank">
+          <a href="https://linkedin.com/in/rahulanantharama" title="Connect with me on LinkedIn" target="_self">
             <i class="fab fa-linkedin fa-2x"></i>
           </a>
-          <a href="https://github.com/anrahulananth" title="See my projects on GitHub" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
+          <a href="https://github.com/anrahulananth" title="Star my projects on GitHub" target="_self">
+            <i class="fab fa-github-square fa-2x"></i>
+          </a>
+          <a href="https://reddit.com/u/RahulAnanthrama" title="Upvote my posts on Reddit" target="_self">
+            <i class="fab fa-reddit-square fa-2x"></i>
           </a>
         </div>
         <div class="downloadResume">
@@ -270,6 +281,27 @@
         </div>
       </div>
     </section>
+    <div class="share-overlay">
+        <div class="share-popup">
+            <h3>
+              Share via
+            </h3>
+            <div class="icons">
+              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=['Rahul Ananth']&amp;p[summary]=[My Portfolio Site]&amp;p[url]=[https://anrahulananth.github.io]&amp;p[images[0]=[https://anrahulananth.github.io/assets/img/portrait.jpeg]]"
+                onclick="window.open(this.href, 'Facebook','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+              <a href="http://www.linkedin.com/shareArticle?url='https://anrahulananth.github.io'&title='Rahul Ananth - Portfolio'"
+                onclick="window.open(this.href, 'LinkedIn','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a href="http://www.reddit.com/submit?url='https://anrahulananth.github.io'&title='Rahul Ananth - Portfolio'"
+                onclick="window.open(this.href, 'redditwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+                <i class="fab fa-reddit-square fa-2x"></i>
+              </a>
+            </div>
+          </div>
+    </div>
     <footer id="main-footer">
       Copyright &copy; Rahul Ananth 2019
     </footer>
