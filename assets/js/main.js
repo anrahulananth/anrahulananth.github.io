@@ -9,7 +9,14 @@ window.addEventListener('load', function(){
  var navItems = document.querySelectorAll(".nav-item");
 
  //set initial state of menu
- var showMenu = false;
+ var showMenu = false;  
+ console.log(navItems, navItems.length, navItems.forEach)
+ navItems && navItems.length && navItems.forEach(handleClick);
+
+ function handleClick(item) {
+   item && item.addEventListener("click", handleMenu);
+ }
+
  var currentLink = document.querySelector(
    `a[href="${window.location.hash == "" ? "/" : window.location.hash}"]`
  );
@@ -41,12 +48,6 @@ window.addEventListener('load', function(){
 
  function handleRemoveClass(item) {
    item.classList.remove("show");
- }
-
- navItems && navItems.length && navItems.forEach(handleClick);
-
- function handleClick(item) {
-   item && item.addEventListener("click", handleMenu);
  }
 
  function handleMenu(event) {
