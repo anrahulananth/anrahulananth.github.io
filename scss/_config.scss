@@ -7,7 +7,6 @@ $font-color: #fff;
 $background-image-1: url("/assets/img/background1.webp");
 $background-image-2: url("/assets/img/background2.webp");
 $background-image-3: url("/assets/img/background3.webp");
-$background-image-4: url("/assets/img/background4.webp");
 
 $show-home-image: true;
 $background-opacity: 0.8;
@@ -22,14 +21,11 @@ $portrait-image: url("/assets/img/portrait.webp");
   0% {
     background: $background-image-1;
   }
-  25% {
+  33% {
     background: $background-image-2;
   }
-  50% {
+  67% {
     background: $background-image-3;
-  }
-  75% {
-    background: $background-image-4;
   }
   100% {
     background: $background-image-1;
@@ -54,7 +50,7 @@ $portrait-image: url("/assets/img/portrait.webp");
         left: 0px;
         width: 0;
         height: 0;
-        background: $background-image-1, $background-image-2, $background-image-3, $background-image-4;
+        background: $background-image-1, $background-image-2, $background-image-3;
       }
       &:after {
         position: fixed;
