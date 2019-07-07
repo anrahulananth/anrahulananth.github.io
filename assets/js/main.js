@@ -57,7 +57,7 @@ window.addEventListener("load", function() {
         navItems[i] && navItems[i].addEventListener("click", handleMenu);
     }
     var currentLink = document.querySelector(
-        `a[href="${window.location.hash == "" ? "/" : window.location.hash}"]`
+        `a[href="${window.location.hash == "" ? "#" : window.location.hash}"]`
     );
     currentLink && currentLink.classList.add("current");
     menuBtn && menuBtn.addEventListener("click", toggleMenu);
