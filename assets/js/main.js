@@ -45,7 +45,7 @@ window.addEventListener("load", function() {
     var menuNav = document.querySelector(".menu-nav");
     var menuBranding = document.querySelector(".menu-branding");
     var navItems = document.querySelectorAll(".nav-item");
-    var shareIcon = document.querySelector(".share-icon");
+    var shareIcon = document.querySelectorAll(".share-icon");
     var shareOverlay = document.querySelector(".share-overlay");
     var shareMessage = document.querySelector(".share-overlay h3");
     var copyIcon = document.querySelector(".copy-icon");
@@ -118,18 +118,20 @@ window.addEventListener("load", function() {
         }
     }
 
-    shareIcon.addEventListener("click", function() {
-        if (navigator.share) {
-            navigator.share({
-                title: "Rahul Ananth",
-                url: "https://anrahulananth.github.io",
-                text:
-                    "My Porfolio Site - This site is developed using only pure JavaScript and SASS without any frameworks!"
-            });
-        } else {
-            shareMessage.innerHTML = "Share Via";
-            shareOverlay.classList.add("show");
-        }
+    shareIcon.forEach(function(icon){
+        icon.addEventListener("click", function (event) {
+            event.preventDefault();
+            if (navigator.share) {
+                navigator.share({
+                    title: "Rahul Ananth",
+                    url: "https://anrahulananth.github.io",
+                    text: "My Porfolio Site - This site is developed using only pure JavaScript and SASS without any frameworks!"
+                });
+            } else {
+                shareMessage.innerHTML = "Share Via";
+                shareOverlay.classList.add("show");
+            }
+        });
     });
 
     shareOverlay.addEventListener("click", function(event) {
