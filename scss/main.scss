@@ -400,6 +400,12 @@ section > *:target ~ * {
   color: $secondary-color;
 }
 
+.vtimeline-responsibility {
+  li {
+    color: $secondary-color;
+  }
+}
+
 //button styles
 .btn {
   display: block;
